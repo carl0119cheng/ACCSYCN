@@ -1,0 +1,6 @@
+D:\CarlCheng\Source code\一站通\取得各縣市帳號\03WriteCityData\WriteCityData\WriteCityData\bin\Release\WriteCityData.exe.config
+D:\CarlCheng\Source code\一站通\取得各縣市帳號\03WriteCityData\WriteCityData\WriteCityData\bin\Release\WriteCityData.exe
+D:\CarlCheng\Source code\一站通\取得各縣市帳號\03WriteCityData\WriteCityData\WriteCityData\bin\Release\WriteCityData.pdb
+D:\CarlCheng\Source code\一站通\取得各縣市帳號\03WriteCityData\WriteCityData\WriteCityData\obj\Release\WriteCityData.csproj.CoreCompileInputs.cache
+D:\CarlCheng\Source code\一站通\取得各縣市帳號\03WriteCityData\WriteCityData\WriteCityData\obj\Release\WriteCityData.exe
+D:\CarlCheng\Source code\一站通\取得各縣市帳號\03WriteCityData\WriteCityData\WriteCityData\obj\Release\WriteCityData.pdb

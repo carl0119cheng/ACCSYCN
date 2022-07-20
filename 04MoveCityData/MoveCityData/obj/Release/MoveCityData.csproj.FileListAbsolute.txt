@@ -1,0 +1,90 @@
+D:\work\消防署ATM\code\MoveCityData\MoveCityData\bin\Release\MoveCityData.exe.config
+D:\work\消防署ATM\code\MoveCityData\MoveCityData\bin\Release\MoveCityData.exe
+D:\work\消防署ATM\code\MoveCityData\MoveCityData\bin\Release\MoveCityData.pdb
+D:\work\消防署ATM\code\MoveCityData\MoveCityData\bin\Release\Microsoft.Bcl.AsyncInterfaces.dll
+D:\work\消防署ATM\code\MoveCityData\MoveCityData\bin\Release\Newtonsoft.Json.dll
+D:\work\消防署ATM\code\MoveCityData\MoveCityData\bin\Release\Oracle.ManagedDataAccess.dll
+D:\work\消防署ATM\code\MoveCityData\MoveCityData\bin\Release\System.Buffers.dll
+D:\work\消防署ATM\code\MoveCityData\MoveCityData\bin\Release\System.Memory.dll
+D:\work\消防署ATM\code\MoveCityData\MoveCityData\bin\Release\System.Numerics.Vectors.dll
+D:\work\消防署ATM\code\MoveCityData\MoveCityData\bin\Release\System.Runtime.CompilerServices.Unsafe.dll
+D:\work\消防署ATM\code\MoveCityData\MoveCityData\bin\Release\System.Text.Encodings.Web.dll
+D:\work\消防署ATM\code\MoveCityData\MoveCityData\bin\Release\System.Text.Json.dll
+D:\work\消防署ATM\code\MoveCityData\MoveCityData\bin\Release\System.Threading.Tasks.Extensions.dll
+D:\work\消防署ATM\code\MoveCityData\MoveCityData\bin\Release\System.ValueTuple.dll
+D:\work\消防署ATM\code\MoveCityData\MoveCityData\bin\Release\Microsoft.Bcl.AsyncInterfaces.xml
+D:\work\消防署ATM\code\MoveCityData\MoveCityData\bin\Release\Newtonsoft.Json.xml
+D:\work\消防署ATM\code\MoveCityData\MoveCityData\bin\Release\System.Buffers.xml
+D:\work\消防署ATM\code\MoveCityData\MoveCityData\bin\Release\System.Memory.xml
+D:\work\消防署ATM\code\MoveCityData\MoveCityData\bin\Release\System.Numerics.Vectors.xml
+D:\work\消防署ATM\code\MoveCityData\MoveCityData\bin\Release\System.Runtime.CompilerServices.Unsafe.xml
+D:\work\消防署ATM\code\MoveCityData\MoveCityData\bin\Release\System.Text.Encodings.Web.xml
+D:\work\消防署ATM\code\MoveCityData\MoveCityData\bin\Release\System.Text.Json.xml
+D:\work\消防署ATM\code\MoveCityData\MoveCityData\bin\Release\System.Threading.Tasks.Extensions.xml
+D:\work\消防署ATM\code\MoveCityData\MoveCityData\bin\Release\System.ValueTuple.xml
+D:\work\消防署ATM\code\MoveCityData\MoveCityData\obj\Release\MoveCityData.csproj.SuggestedBindingRedirects.cache
+D:\work\消防署ATM\code\MoveCityData\MoveCityData\obj\Release\MoveCityData.csproj.CoreCompileInputs.cache
+D:\work\消防署ATM\code\MoveCityData\MoveCityData\obj\Release\MoveCityData.csproj.CopyComplete
+D:\work\消防署ATM\code\MoveCityData\MoveCityData\obj\Release\MoveCityData.exe
+D:\work\消防署ATM\code\MoveCityData\MoveCityData\obj\Release\MoveCityData.pdb
+D:\CarlCheng\Source code\一站通\取得各縣市帳號\04MoveCityData\MoveCityData\bin\Release\MoveCityData.exe.config
+D:\CarlCheng\Source code\一站通\取得各縣市帳號\04MoveCityData\MoveCityData\bin\Release\MoveCityData.exe
+D:\CarlCheng\Source code\一站通\取得各縣市帳號\04MoveCityData\MoveCityData\bin\Release\MoveCityData.pdb
+D:\CarlCheng\Source code\一站通\取得各縣市帳號\04MoveCityData\MoveCityData\bin\Release\Microsoft.Bcl.AsyncInterfaces.dll
+D:\CarlCheng\Source code\一站通\取得各縣市帳號\04MoveCityData\MoveCityData\bin\Release\Newtonsoft.Json.dll
+D:\CarlCheng\Source code\一站通\取得各縣市帳號\04MoveCityData\MoveCityData\bin\Release\Oracle.ManagedDataAccess.dll
+D:\CarlCheng\Source code\一站通\取得各縣市帳號\04MoveCityData\MoveCityData\bin\Release\System.Buffers.dll
+D:\CarlCheng\Source code\一站通\取得各縣市帳號\04MoveCityData\MoveCityData\bin\Release\System.Memory.dll
+D:\CarlCheng\Source code\一站通\取得各縣市帳號\04MoveCityData\MoveCityData\bin\Release\System.Numerics.Vectors.dll
+D:\CarlCheng\Source code\一站通\取得各縣市帳號\04MoveCityData\MoveCityData\bin\Release\System.Runtime.CompilerServices.Unsafe.dll
+D:\CarlCheng\Source code\一站通\取得各縣市帳號\04MoveCityData\MoveCityData\bin\Release\System.Text.Encodings.Web.dll
+D:\CarlCheng\Source code\一站通\取得各縣市帳號\04MoveCityData\MoveCityData\bin\Release\System.Text.Json.dll
+D:\CarlCheng\Source code\一站通\取得各縣市帳號\04MoveCityData\MoveCityData\bin\Release\System.Threading.Tasks.Extensions.dll
+D:\CarlCheng\Source code\一站通\取得各縣市帳號\04MoveCityData\MoveCityData\bin\Release\System.ValueTuple.dll
+D:\CarlCheng\Source code\一站通\取得各縣市帳號\04MoveCityData\MoveCityData\bin\Release\Microsoft.Bcl.AsyncInterfaces.xml
+D:\CarlCheng\Source code\一站通\取得各縣市帳號\04MoveCityData\MoveCityData\bin\Release\Newtonsoft.Json.xml
+D:\CarlCheng\Source code\一站通\取得各縣市帳號\04MoveCityData\MoveCityData\bin\Release\System.Buffers.xml
+D:\CarlCheng\Source code\一站通\取得各縣市帳號\04MoveCityData\MoveCityData\bin\Release\System.Memory.xml
+D:\CarlCheng\Source code\一站通\取得各縣市帳號\04MoveCityData\MoveCityData\bin\Release\System.Numerics.Vectors.xml
+D:\CarlCheng\Source code\一站通\取得各縣市帳號\04MoveCityData\MoveCityData\bin\Release\System.Runtime.CompilerServices.Unsafe.xml
+D:\CarlCheng\Source code\一站通\取得各縣市帳號\04MoveCityData\MoveCityData\bin\Release\System.Text.Encodings.Web.xml
+D:\CarlCheng\Source code\一站通\取得各縣市帳號\04MoveCityData\MoveCityData\bin\Release\System.Text.Json.xml
+D:\CarlCheng\Source code\一站通\取得各縣市帳號\04MoveCityData\MoveCityData\bin\Release\System.Threading.Tasks.Extensions.xml
+D:\CarlCheng\Source code\一站通\取得各縣市帳號\04MoveCityData\MoveCityData\bin\Release\System.ValueTuple.xml
+D:\CarlCheng\Source code\一站通\取得各縣市帳號\04MoveCityData\MoveCityData\obj\Release\MoveCityData.csproj.AssemblyReference.cache
+D:\CarlCheng\Source code\一站通\取得各縣市帳號\04MoveCityData\MoveCityData\obj\Release\MoveCityData.csproj.CoreCompileInputs.cache
+D:\CarlCheng\Source code\一站通\取得各縣市帳號\04MoveCityData\MoveCityData\obj\Release\MoveCityData.csproj.CopyComplete
+D:\CarlCheng\Source code\一站通\取得各縣市帳號\04MoveCityData\MoveCityData\obj\Release\MoveCityData.exe
+D:\CarlCheng\Source code\一站通\取得各縣市帳號\04MoveCityData\MoveCityData\obj\Release\MoveCityData.pdb
+D:\CarlCheng\Source code\一站通WEB\取得各縣市帳號\04MoveCityData\MoveCityData\bin\Release\NLog.config
+D:\CarlCheng\Source code\一站通WEB\取得各縣市帳號\04MoveCityData\MoveCityData\bin\Release\MoveCityData.exe.config
+D:\CarlCheng\Source code\一站通WEB\取得各縣市帳號\04MoveCityData\MoveCityData\bin\Release\MoveCityData.exe
+D:\CarlCheng\Source code\一站通WEB\取得各縣市帳號\04MoveCityData\MoveCityData\bin\Release\MoveCityData.pdb
+D:\CarlCheng\Source code\一站通WEB\取得各縣市帳號\04MoveCityData\MoveCityData\bin\Release\Microsoft.Bcl.AsyncInterfaces.dll
+D:\CarlCheng\Source code\一站通WEB\取得各縣市帳號\04MoveCityData\MoveCityData\bin\Release\Newtonsoft.Json.dll
+D:\CarlCheng\Source code\一站通WEB\取得各縣市帳號\04MoveCityData\MoveCityData\bin\Release\NLog.dll
+D:\CarlCheng\Source code\一站通WEB\取得各縣市帳號\04MoveCityData\MoveCityData\bin\Release\Oracle.ManagedDataAccess.dll
+D:\CarlCheng\Source code\一站通WEB\取得各縣市帳號\04MoveCityData\MoveCityData\bin\Release\System.Buffers.dll
+D:\CarlCheng\Source code\一站通WEB\取得各縣市帳號\04MoveCityData\MoveCityData\bin\Release\System.Memory.dll
+D:\CarlCheng\Source code\一站通WEB\取得各縣市帳號\04MoveCityData\MoveCityData\bin\Release\System.Numerics.Vectors.dll
+D:\CarlCheng\Source code\一站通WEB\取得各縣市帳號\04MoveCityData\MoveCityData\bin\Release\System.Runtime.CompilerServices.Unsafe.dll
+D:\CarlCheng\Source code\一站通WEB\取得各縣市帳號\04MoveCityData\MoveCityData\bin\Release\System.Text.Encodings.Web.dll
+D:\CarlCheng\Source code\一站通WEB\取得各縣市帳號\04MoveCityData\MoveCityData\bin\Release\System.Text.Json.dll
+D:\CarlCheng\Source code\一站通WEB\取得各縣市帳號\04MoveCityData\MoveCityData\bin\Release\System.Threading.Tasks.Extensions.dll
+D:\CarlCheng\Source code\一站通WEB\取得各縣市帳號\04MoveCityData\MoveCityData\bin\Release\System.ValueTuple.dll
+D:\CarlCheng\Source code\一站通WEB\取得各縣市帳號\04MoveCityData\MoveCityData\bin\Release\Microsoft.Bcl.AsyncInterfaces.xml
+D:\CarlCheng\Source code\一站通WEB\取得各縣市帳號\04MoveCityData\MoveCityData\bin\Release\Newtonsoft.Json.xml
+D:\CarlCheng\Source code\一站通WEB\取得各縣市帳號\04MoveCityData\MoveCityData\bin\Release\NLog.xml
+D:\CarlCheng\Source code\一站通WEB\取得各縣市帳號\04MoveCityData\MoveCityData\bin\Release\System.Buffers.xml
+D:\CarlCheng\Source code\一站通WEB\取得各縣市帳號\04MoveCityData\MoveCityData\bin\Release\System.Memory.xml
+D:\CarlCheng\Source code\一站通WEB\取得各縣市帳號\04MoveCityData\MoveCityData\bin\Release\System.Numerics.Vectors.xml
+D:\CarlCheng\Source code\一站通WEB\取得各縣市帳號\04MoveCityData\MoveCityData\bin\Release\System.Runtime.CompilerServices.Unsafe.xml
+D:\CarlCheng\Source code\一站通WEB\取得各縣市帳號\04MoveCityData\MoveCityData\bin\Release\System.Text.Encodings.Web.xml
+D:\CarlCheng\Source code\一站通WEB\取得各縣市帳號\04MoveCityData\MoveCityData\bin\Release\System.Text.Json.xml
+D:\CarlCheng\Source code\一站通WEB\取得各縣市帳號\04MoveCityData\MoveCityData\bin\Release\System.Threading.Tasks.Extensions.xml
+D:\CarlCheng\Source code\一站通WEB\取得各縣市帳號\04MoveCityData\MoveCityData\bin\Release\System.ValueTuple.xml
+D:\CarlCheng\Source code\一站通WEB\取得各縣市帳號\04MoveCityData\MoveCityData\obj\Release\MoveCityData.csproj.SuggestedBindingRedirects.cache
+D:\CarlCheng\Source code\一站通WEB\取得各縣市帳號\04MoveCityData\MoveCityData\obj\Release\MoveCityData.csproj.CoreCompileInputs.cache
+D:\CarlCheng\Source code\一站通WEB\取得各縣市帳號\04MoveCityData\MoveCityData\obj\Release\MoveCityData.csproj.CopyComplete
+D:\CarlCheng\Source code\一站通WEB\取得各縣市帳號\04MoveCityData\MoveCityData\obj\Release\MoveCityData.exe
+D:\CarlCheng\Source code\一站通WEB\取得各縣市帳號\04MoveCityData\MoveCityData\obj\Release\MoveCityData.pdb

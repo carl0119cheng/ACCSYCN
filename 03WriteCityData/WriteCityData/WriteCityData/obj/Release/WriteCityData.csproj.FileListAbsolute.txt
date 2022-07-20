@@ -1,0 +1,19 @@
+D:\work\消防署ATM\code\WriteCityData\WriteCityData\bin\Release\WriteCityData.exe.config
+D:\work\消防署ATM\code\WriteCityData\WriteCityData\bin\Release\WriteCityData.exe
+D:\work\消防署ATM\code\WriteCityData\WriteCityData\bin\Release\WriteCityData.pdb
+D:\work\消防署ATM\code\WriteCityData\WriteCityData\obj\Release\WriteCityData.csproj.SuggestedBindingRedirects.cache
+D:\work\消防署ATM\code\WriteCityData\WriteCityData\obj\Release\WriteCityData.csproj.CoreCompileInputs.cache
+D:\work\消防署ATM\code\WriteCityData\WriteCityData\obj\Release\WriteCityData.exe
+D:\work\消防署ATM\code\WriteCityData\WriteCityData\obj\Release\WriteCityData.pdb
+D:\CarlCheng\Source code\一站通WEB\取得各縣市帳號\03WriteCityData\WriteCityData\WriteCityData\bin\Release\NLog.config
+D:\CarlCheng\Source code\一站通WEB\取得各縣市帳號\03WriteCityData\WriteCityData\WriteCityData\bin\Release\WriteCityData.exe.config
+D:\CarlCheng\Source code\一站通WEB\取得各縣市帳號\03WriteCityData\WriteCityData\WriteCityData\bin\Release\WriteCityData.exe
+D:\CarlCheng\Source code\一站通WEB\取得各縣市帳號\03WriteCityData\WriteCityData\WriteCityData\bin\Release\WriteCityData.pdb
+D:\CarlCheng\Source code\一站通WEB\取得各縣市帳號\03WriteCityData\WriteCityData\WriteCityData\bin\Release\NLog.dll
+D:\CarlCheng\Source code\一站通WEB\取得各縣市帳號\03WriteCityData\WriteCityData\WriteCityData\bin\Release\NLog.xml
+D:\CarlCheng\Source code\一站通WEB\取得各縣市帳號\03WriteCityData\WriteCityData\WriteCityData\obj\Release\WriteCityData.csproj.AssemblyReference.cache
+D:\CarlCheng\Source code\一站通WEB\取得各縣市帳號\03WriteCityData\WriteCityData\WriteCityData\obj\Release\WriteCityData.csproj.SuggestedBindingRedirects.cache
+D:\CarlCheng\Source code\一站通WEB\取得各縣市帳號\03WriteCityData\WriteCityData\WriteCityData\obj\Release\WriteCityData.csproj.CoreCompileInputs.cache
+D:\CarlCheng\Source code\一站通WEB\取得各縣市帳號\03WriteCityData\WriteCityData\WriteCityData\obj\Release\WriteCityData.csproj.CopyComplete
+D:\CarlCheng\Source code\一站通WEB\取得各縣市帳號\03WriteCityData\WriteCityData\WriteCityData\obj\Release\WriteCityData.exe
+D:\CarlCheng\Source code\一站通WEB\取得各縣市帳號\03WriteCityData\WriteCityData\WriteCityData\obj\Release\WriteCityData.pdb

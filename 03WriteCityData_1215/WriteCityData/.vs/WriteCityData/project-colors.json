@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "5dbf44fd-98e2-4c1f-b4a0-7d6ec31785f2": {
+      "ProjectGuid": "5dbf44fd-98e2-4c1f-b4a0-7d6ec31785f2",
+      "DisplayName": "WriteCityData",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

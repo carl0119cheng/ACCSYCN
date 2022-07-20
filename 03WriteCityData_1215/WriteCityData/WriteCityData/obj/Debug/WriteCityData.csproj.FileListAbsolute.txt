@@ -1,0 +1,22 @@
+C:\Users\mds_nb\Desktop\新增資料夾\WriteCityData\WriteCityData\bin\Debug\WriteCityData.exe.config
+C:\Users\mds_nb\Desktop\新增資料夾\WriteCityData\WriteCityData\bin\Debug\WriteCityData.exe
+C:\Users\mds_nb\Desktop\新增資料夾\WriteCityData\WriteCityData\bin\Debug\WriteCityData.pdb
+C:\Users\mds_nb\Desktop\新增資料夾\WriteCityData\WriteCityData\obj\Debug\WriteCityData.csproj.SuggestedBindingRedirects.cache
+C:\Users\mds_nb\Desktop\新增資料夾\WriteCityData\WriteCityData\obj\Debug\WriteCityData.csproj.CoreCompileInputs.cache
+C:\Users\mds_nb\Desktop\新增資料夾\WriteCityData\WriteCityData\obj\Debug\WriteCityData.exe
+C:\Users\mds_nb\Desktop\新增資料夾\WriteCityData\WriteCityData\obj\Debug\WriteCityData.pdb
+D:\work\消防署ATM\code\WriteCityData\WriteCityData\bin\Debug\WriteCityData.exe.config
+D:\work\消防署ATM\code\WriteCityData\WriteCityData\bin\Debug\WriteCityData.exe
+D:\work\消防署ATM\code\WriteCityData\WriteCityData\bin\Debug\WriteCityData.pdb
+D:\work\消防署ATM\code\WriteCityData\WriteCityData\obj\Debug\WriteCityData.csproj.AssemblyReference.cache
+D:\work\消防署ATM\code\WriteCityData\WriteCityData\obj\Debug\WriteCityData.csproj.SuggestedBindingRedirects.cache
+D:\work\消防署ATM\code\WriteCityData\WriteCityData\obj\Debug\WriteCityData.csproj.CoreCompileInputs.cache
+D:\work\消防署ATM\code\WriteCityData\WriteCityData\obj\Debug\WriteCityData.exe
+D:\work\消防署ATM\code\WriteCityData\WriteCityData\obj\Debug\WriteCityData.pdb
+D:\CarlCheng\Source code\一站通\取得各縣市帳號\03WriteCityData\WriteCityData\WriteCityData\bin\Debug\WriteCityData.exe.config
+D:\CarlCheng\Source code\一站通\取得各縣市帳號\03WriteCityData\WriteCityData\WriteCityData\bin\Debug\WriteCityData.exe
+D:\CarlCheng\Source code\一站通\取得各縣市帳號\03WriteCityData\WriteCityData\WriteCityData\bin\Debug\WriteCityData.pdb
+D:\CarlCheng\Source code\一站通\取得各縣市帳號\03WriteCityData\WriteCityData\WriteCityData\obj\Debug\WriteCityData.csproj.AssemblyReference.cache
+D:\CarlCheng\Source code\一站通\取得各縣市帳號\03WriteCityData\WriteCityData\WriteCityData\obj\Debug\WriteCityData.csproj.CoreCompileInputs.cache
+D:\CarlCheng\Source code\一站通\取得各縣市帳號\03WriteCityData\WriteCityData\WriteCityData\obj\Debug\WriteCityData.exe
+D:\CarlCheng\Source code\一站通\取得各縣市帳號\03WriteCityData\WriteCityData\WriteCityData\obj\Debug\WriteCityData.pdb
