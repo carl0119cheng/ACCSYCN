@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
 using System.Globalization;
 using System.IO;
@@ -27,7 +28,7 @@ namespace WriteCityData
             string fileDir = ConfigurationManager.AppSettings["DataFilePath"].ToString();
             string backUpDir = ConfigurationManager.AppSettings["BackUpFilePath"].ToString();
             string backUpFolder = Path.Combine(backUpDir, DateTime.Now.ToString("yyyyMMdd_HHmmss"));
-            
+            string connStr = ConfigurationManager.ConnectionStrings["conn"].ConnectionString;
             try
             {
                 //新增備份資料夾
@@ -65,8 +66,8 @@ namespace WriteCityData
 
                 WriteLog("Info", "開始新增資料至 DEPT");
                 string deptDir = Path.Combine(fileDir, "DEPT");
-                List<DtDept> deptLst = new List<DtDept>();
-                bool hasRow = false;
+                //List<DtDept> deptLst = new List<DtDept>();
+                //bool hasRow = false;
 
                 string deptSQL = string.Empty;
                 if (Directory.Exists(deptDir))
@@ -81,12 +82,35 @@ namespace WriteCityData
                             string fileNameWithoutEx = Path.GetFileNameWithoutExtension(path);
                             string city = fileNameWithoutEx.Substring(fileNameWithoutEx.IndexOf("-") + 1);
                             string data = File.ReadAllText(path);
+
                             if (data.Length > 0)
                             {
                                 //data = data.Replace("\r\n", "\n");
                                 string[] stringSeparators = new string[] { "\r\n" };
                                 string[] row = data.Split(stringSeparators, StringSplitOptions.None);
-
+                                DataTable tbDEPT = new DataTable();
+                                DataColumn CID = new DataColumn("CID");
+                                DataColumn DEPTNO = new DataColumn("DEPTNO");
+                                DataColumn DEPTNAME = new DataColumn("DEPTNAME");
+                                DataColumn INDEPTNO = new DataColumn("INDEPTNO");
+                                DataColumn GRADE = new DataColumn("GRADE");
+                                DataColumn ADDR = new DataColumn("ADDR");
+                                DataColumn X = new DataColumn("X");
+                                DataColumn Y = new DataColumn("Y");
+                                DataColumn LDATE = new DataColumn("LDATE");
+                                DataColumn LUSER = new DataColumn("LUSER");
+                                DataColumn DELETED = new DataColumn("DELETED");
+                                tbDEPT.Columns.Add(CID);
+                                tbDEPT.Columns.Add(DEPTNO);
+                                tbDEPT.Columns.Add(DEPTNAME);
+                                tbDEPT.Columns.Add(INDEPTNO);
+                                tbDEPT.Columns.Add(GRADE);
+                                tbDEPT.Columns.Add(ADDR);
+                                tbDEPT.Columns.Add(X);
+                                tbDEPT.Columns.Add(Y);
+                                tbDEPT.Columns.Add(LDATE);
+                                tbDEPT.Columns.Add(LUSER);
+                                tbDEPT.Columns.Add(DELETED);
                                 for (int s = 0; s < row.Count(); s++)
                                 {
                                     if (row[s].Equals(string.Empty))
@@ -106,44 +130,60 @@ namespace WriteCityData
                                         strY = item[6].ToString();
                                     }
 
-                                    dept.DEPTNO = item[0];
-                                    dept.DEPTNAME = item[1];
-                                    dept.INDEPTNO = item[2];
-                                    dept.GRADE = item[3];
-                                    dept.ADDR = item[4];
-                                    dept.X = strX;
-                                    dept.Y = strY;
-                                    dept.LDATE = item[7];
-                                    dept.LUSER = item[8];
-                                    dept.DELETED = item[9];
-                                    deptLst.Add(dept);
+                                    DataRow row1 = tbDEPT.NewRow();
+                                    row1["CID"] = city;
+                                    row1["DEPTNO"] = item[0];
+                                    row1["DEPTNAME"] = item[1];
+                                    row1["INDEPTNO"] = item[2];
+                                    row1["GRADE"] = item[3];
+                                    row1["ADDR"] = item[4];
+                                    row1["X"] = strX;
+                                    row1["Y"] = strY;
+                                    row1["LDATE"] = item[7];
+                                    row1["LUSER"] = item[8];
+                                    row1["DELETED"] = item[9];
+                                    tbDEPT.Rows.Add(row1);
                                 }
 
-                                if (deptLst.Count > 0)
+                                if (tbDEPT.Rows.Count > 0)
                                 {
-                                    foreach (var item in deptLst)
-                                    {
-                                        string value = string.Format(@"INSERT DEPT_forOracle
-(CID ,DEPTNO ,DEPTNAME ,INDEPTNO ,GRADE ,ADDR ,X ,Y ,LDATE ,LUSER ,DELETED)
-VALUES
-('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', {6}, {7}, '{8}', '{9}', '{10}');
-",
-                                            city, item.DEPTNO, item.DEPTNAME, item.INDEPTNO, item.GRADE, item.ADDR, item.X, item.Y, item.LDATE, item.LUSER, item.DELETED);
-                                        deptSQL += value;
-                                        hasRow = true;
-                                    }
-
-                                    if (hasRow)
-                                    {
                                         string deleteSQL = string.Format(@"DELETE FROM DEPT_forOracle WHERE CID = '{0}';", city);
                                         ExecuteDeleteCommand(deleteSQL);
 
-                                        deptSQL = deptSQL.Substring(0, deptSQL.Length - 1);
-                                        ExecuteInsertCommand(deptSQL);
+                                    using (SqlConnection conn = new SqlConnection(connStr))
+                                    {
+                                        conn.Open();
+                                        using (SqlBulkCopy sqlBC = new SqlBulkCopy(conn))
+                                        {
+                                            //設定一個批次量寫入多少筆資料
+                                            sqlBC.BatchSize = 1000;
 
-                                        File.Move(path, Path.Combine(backUpFolder, fileName));
+                                            //設定逾時的秒數
+                                            sqlBC.BulkCopyTimeout = 60;
 
+                                            //設定要寫入的資料庫
+                                            sqlBC.DestinationTableName = "DEPT_forOracle";
+
+                                            //對應資料行
+                                            sqlBC.ColumnMappings.Add("CID", "CID");
+                                            sqlBC.ColumnMappings.Add("DEPTNO", "DEPTNO");
+                                            sqlBC.ColumnMappings.Add("DEPTNAME", "DEPTNAME");
+                                            sqlBC.ColumnMappings.Add("INDEPTNO", "INDEPTNO");
+                                            sqlBC.ColumnMappings.Add("GRADE", "GRADE");
+                                            sqlBC.ColumnMappings.Add("ADDR", "ADDR");
+                                            sqlBC.ColumnMappings.Add("X", "X");
+                                            sqlBC.ColumnMappings.Add("Y", "Y");
+                                            sqlBC.ColumnMappings.Add("LDATE", "LDATE");
+                                            sqlBC.ColumnMappings.Add("LUSER", "LUSER");
+                                            sqlBC.ColumnMappings.Add("DELETED", "DELETED");
+                                            //開始寫入
+                                            sqlBC.WriteToServer(tbDEPT);
+                                        }
                                     }
+
+                                    File.Move(path, Path.Combine(backUpFolder, fileName));
+
+  
                                 }
                             }
                         }
@@ -162,8 +202,8 @@ VALUES
                 #region EMPL
                 WriteLog("Info", "開始新增資料至 EMPL");
                 string emplDir = Path.Combine(fileDir, "EMPL");
-                List<DtEmpl> emplLst = new List<DtEmpl>();
-                bool hasRow = false;
+                //List<DtEmpl> emplLst = new List<DtEmpl>();
+                //bool hasRow = false;
 
                 string emplSQL = string.Empty;
                 if (Directory.Exists(emplDir))
@@ -183,6 +223,50 @@ VALUES
                                 data = data.Replace("\r\n", "\n");
                                 string[] row = data.Split('\n');
 
+                                DataTable tbEMPL = new DataTable();
+                                DataColumn USERID = new DataColumn("USERID");
+                                DataColumn PWD = new DataColumn("PWD");
+                                DataColumn NAME = new DataColumn("NAME");
+                                DataColumn COUNTRY = new DataColumn("COUNTRY");
+                                DataColumn DEPTNO = new DataColumn("DEPTNO");
+                                DataColumn JOBTITLE = new DataColumn("JOBTITLE");
+                                DataColumn JOBTYPE = new DataColumn("JOBTYPE");
+                                DataColumn ONDUTY = new DataColumn("ONDUTY");
+                                DataColumn EMAIL = new DataColumn("EMAIL");
+                                DataColumn PRETEL = new DataColumn("PRETEL");
+                                DataColumn TEL = new DataColumn("TEL");
+                                DataColumn LASTTEL = new DataColumn("LASTTEL");
+                                DataColumn CELLPHONE = new DataColumn("CELLPHONE");
+                                DataColumn LDATE = new DataColumn("LDATE");
+                                DataColumn LUSER = new DataColumn("LUSER");
+                                DataColumn ROLEID = new DataColumn("ROLEID");
+                                DataColumn DELETED = new DataColumn("DELETED");
+                                DataColumn NEWDEPTNO = new DataColumn("NEWDEPTNO");
+                                DataColumn NEWROLEID = new DataColumn("NEWROLEID");
+                                DataColumn CHECKROLE = new DataColumn("CHECKROLE");
+                                DataColumn MEMID = new DataColumn("MEMID");
+                                tbEMPL.Columns.Add(USERID);
+                                tbEMPL.Columns.Add(PWD);
+                                tbEMPL.Columns.Add(NAME);
+                                tbEMPL.Columns.Add(COUNTRY);
+                                tbEMPL.Columns.Add(DEPTNO);
+                                tbEMPL.Columns.Add(JOBTITLE);
+                                tbEMPL.Columns.Add(JOBTYPE);
+                                tbEMPL.Columns.Add(ONDUTY);
+                                tbEMPL.Columns.Add(EMAIL);
+                                tbEMPL.Columns.Add(PRETEL);
+                                tbEMPL.Columns.Add(TEL);
+                                tbEMPL.Columns.Add(LASTTEL);
+                                tbEMPL.Columns.Add(CELLPHONE);
+                                tbEMPL.Columns.Add(LDATE);
+                                tbEMPL.Columns.Add(LUSER);
+                                tbEMPL.Columns.Add(ROLEID);
+                                tbEMPL.Columns.Add(DELETED);
+                                tbEMPL.Columns.Add(NEWDEPTNO);
+                                tbEMPL.Columns.Add(NEWROLEID);
+                                tbEMPL.Columns.Add(CHECKROLE);
+                                tbEMPL.Columns.Add(MEMID);
+
                                 for (int s = 0; s < row.Count(); s++)
                                 {
                                     if (row[s].Equals(string.Empty))
@@ -191,57 +275,77 @@ VALUES
                                     }
 
                                     string[] item = row[s].Split('\t');
-                                    DtEmpl empl = new DtEmpl();
-                                    empl.USERID = item[0];
-                                    empl.PWD = item[1];
-                                    empl.NAME = item[2];
-                                    empl.COUNTRY = item[3];
-                                    empl.DEPTNO = item[4];
-                                    empl.JOBTITLE = item[5];
-                                    empl.JOBTYPE = item[6];
-                                    empl.ONDUTY = item[7];
-                                    empl.EMAIL = item[8];
-                                    empl.PRETEL = item[9];
-                                    empl.TEL = item[10];
-                                    empl.LASTTEL = item[11];
-                                    empl.CELLPHONE = item[12];
-                                    empl.LDATE = item[13];
-                                    empl.LUSER = item[14];
-                                    empl.ROLEID = item[15];
-                                    empl.DELETED = item[16];
-                                    empl.NEWDEPTNO = item[17];
-                                    empl.NEWROLEID = item[18];
-                                    empl.CHECKROLE = item[19];
-                                    empl.MEMID = item[20];
-                                    emplLst.Add(empl);
+                                    DataRow row1 = tbEMPL.NewRow();
+                                    row1["USERID"] = item[0];
+                                    row1["PWD"] = item[1];
+                                    row1["NAME"] = item[2];
+                                    row1["COUNTRY"] = item[3];
+                                    row1["DEPTNO"] = item[4];
+                                    row1["JOBTITLE"] = item[5];
+                                    row1["JOBTYPE"] = item[6];
+                                    row1["ONDUTY"] = item[7];
+                                    row1["EMAIL"] = item[8];
+                                    row1["PRETEL"] = item[9];
+                                    row1["TEL"] = item[10];
+                                    row1["LASTTEL"] = item[11];
+                                    row1["CELLPHONE"] = item[12];
+                                    row1["LDATE"] = item[13];
+                                    row1["LUSER"] = item[14];
+                                    row1["ROLEID"] = item[15];
+                                    row1["DELETED"] = item[16];
+                                    row1["NEWDEPTNO"] = item[17];
+                                    row1["NEWROLEID"] = item[18];
+                                    row1["CHECKROLE"] = item[19];
+                                    row1["MEMID"] = item[20];
+                                    tbEMPL.Rows.Add(row1);
                                 }
 
-                                if (emplLst.Count > 0)
+                                if (tbEMPL.Rows.Count > 0)
                                 {
-                                    foreach (var item in emplLst)
-                                    {
-                                        string value = string.Format(@"INSERT EMPL_forOracle
-(USERID ,PWD ,NAME ,COUNTRY ,DEPTNO ,JOBTITLE ,JOBTYPE ,ONDUTY ,EMAIL ,PRETEL ,TEL ,LASTTEL ,CELLPHONE ,LDATE ,LUSER ,ROLEID ,DELETED ,NEWDEPTNO ,NEWROLEID ,CHECKROLE ,MEMID)
-VALUES
-('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}', '{10}', '{11}', '{12}', '{13}', '{14}', '{15}', '{16}', '{17}', '{18}', '{19}', '{20}');
-",
-                                            item.USERID, item.PWD, item.NAME, item.COUNTRY, item.DEPTNO, item.JOBTITLE, item.JOBTYPE, item.ONDUTY,
-                                            item.EMAIL, item.PRETEL, item.TEL, item.LASTTEL, item.CELLPHONE, item.LDATE, item.LUSER, item.ROLEID,
-                                            item.DELETED, item.NEWDEPTNO, item.NEWROLEID, item.CHECKROLE, item.MEMID);
-                                        emplSQL += value;
-                                        hasRow = true;
-                                    }
-
-                                    if (hasRow)
-                                    {
-                                        string deleteSQL = string.Format(@"DELETE FROM EMPL_forOracle WHERE COUNTRY = '{0}';", city);
+                                       string deleteSQL = string.Format(@"DELETE FROM EMPL_forOracle WHERE COUNTRY = '{0}';", city);
                                         ExecuteDeleteCommand(deleteSQL);
+                                    using (SqlConnection conn = new SqlConnection(connStr))
+                                    {
+                                        conn.Open();
+                                        using (SqlBulkCopy sqlBC = new SqlBulkCopy(conn))
+                                        {
+                                            //設定一個批次量寫入多少筆資料
+                                            sqlBC.BatchSize = 1000;
 
-                                        emplSQL = emplSQL.Substring(0, emplSQL.Length - 1);
-                                        ExecuteInsertCommand(emplSQL);
+                                            //設定逾時的秒數
+                                            sqlBC.BulkCopyTimeout = 60;
 
-                                        File.Move(path, Path.Combine(backUpFolder, fileName));
+                                            //設定要寫入的資料庫
+                                            sqlBC.DestinationTableName = "EMPL_forOracle";
+
+                                            //對應資料行
+                                            sqlBC.ColumnMappings.Add("USERID", "USERID");
+                                            sqlBC.ColumnMappings.Add("PWD", "PWD");
+                                            sqlBC.ColumnMappings.Add("NAME", "NAME");
+                                            sqlBC.ColumnMappings.Add("COUNTRY", "COUNTRY");
+                                            sqlBC.ColumnMappings.Add("DEPTNO", "DEPTNO");
+                                            sqlBC.ColumnMappings.Add("JOBTITLE", "JOBTITLE");
+                                            sqlBC.ColumnMappings.Add("JOBTYPE", "JOBTYPE");
+                                            sqlBC.ColumnMappings.Add("ONDUTY", "ONDUTY");
+                                            sqlBC.ColumnMappings.Add("EMAIL", "EMAIL");
+                                            sqlBC.ColumnMappings.Add("PRETEL", "PRETEL");
+                                            sqlBC.ColumnMappings.Add("TEL", "TEL");
+                                            sqlBC.ColumnMappings.Add("LASTTEL", "LASTTEL");
+                                            sqlBC.ColumnMappings.Add("CELLPHONE", "CELLPHONE");
+                                            sqlBC.ColumnMappings.Add("LDATE", "LDATE");
+                                            sqlBC.ColumnMappings.Add("LUSER", "LUSER");
+                                            sqlBC.ColumnMappings.Add("ROLEID", "ROLEID");
+                                            sqlBC.ColumnMappings.Add("DELETED", "DELETED");
+                                            sqlBC.ColumnMappings.Add("NEWDEPTNO", "NEWDEPTNO");
+                                            sqlBC.ColumnMappings.Add("NEWROLEID", "NEWROLEID");
+                                            sqlBC.ColumnMappings.Add("CHECKROLE", "CHECKROLE");
+                                            sqlBC.ColumnMappings.Add("MEMID", "MEMID");
+
+                                            //開始寫入
+                                            sqlBC.WriteToServer(tbEMPL);
+                                        }
                                     }
+                                    File.Move(path, Path.Combine(backUpFolder, fileName));
                                 }
                             }
                         }
@@ -279,6 +383,18 @@ VALUES
                             string data = File.ReadAllText(path);
                             if (data.Length > 0)
                             {
+                                DataTable tbEmplMapping = new DataTable();
+                                DataColumn COUNTRY = new DataColumn("COUNTRY");
+                                DataColumn USERID = new DataColumn("USERID");
+                                DataColumn NDPPC_UID = new DataColumn("NDPPC_UID");
+                                DataColumn LDATE = new DataColumn("LDATE");
+                                DataColumn LUSER = new DataColumn("LUSER");
+                                tbEmplMapping.Columns.Add(COUNTRY);
+                                tbEmplMapping.Columns.Add(USERID);
+                                tbEmplMapping.Columns.Add(NDPPC_UID);
+                                tbEmplMapping.Columns.Add(LDATE);
+                                tbEmplMapping.Columns.Add(LUSER);
+
                                 data = data.Replace("\r\n", "\n");
                                 string[] row = data.Split('\n');
 
@@ -290,39 +406,47 @@ VALUES
                                     }
 
                                     string[] item = row[s].Split('\t');
-                                    DtEmplMap emplMap = new DtEmplMap();
-                                    emplMap.COUNTRY = item[0];
-                                    emplMap.USERID = item[1];
-                                    emplMap.NDPPC_UID = item[2];
-                                    emplMap.LDATE = item[3];
-                                    emplMap.LUSER = item[4];
-                                    emplMapLst.Add(emplMap);
+                                    DataRow row1 = tbEmplMapping.NewRow();
+                                    row1["COUNTRY"] = item[0];
+                                    row1["USERID"] = item[1];
+                                    row1["NDPPC_UID"] = item[2];
+                                    row1["LDATE"] = item[3];
+                                    row1["LUSER"] = item[4];
+                                    tbEmplMapping.Rows.Add(row1);
                                 }
 
-                                if (emplMapLst.Count > 0)
+                                if (tbEmplMapping.Rows.Count > 0)
                                 {
-                                    foreach (var item in emplMapLst)
-                                    {
-                                        string value = string.Format(@"INSERT EMPL_MAPPING_forOracle
-(COUNTRY ,USERID ,NDPPC_UID ,LDATE ,LUSER)
-VALUES
-('{0}', '{1}', '{2}', '{3}', '{4}');
-",
-                                            item.COUNTRY, item.USERID, item.NDPPC_UID, item.LDATE, item.LUSER);
-                                        emplMapSQL += value;
-                                        hasRow = true;
-                                    }
-
-                                    if (hasRow)
-                                    {
                                         string deleteSQL = string.Format(@"DELETE FROM EMPL_MAPPING_forOracle WHERE COUNTRY = '{0}';", city);
                                         ExecuteDeleteCommand(deleteSQL);
 
-                                        emplMapSQL = emplMapSQL.Substring(0, emplMapSQL.Length - 1);
-                                        ExecuteInsertCommand(emplMapSQL);
+                                    using (SqlConnection conn = new SqlConnection(connStr))
+                                    {
+                                        conn.Open();
+                                        using (SqlBulkCopy sqlBC = new SqlBulkCopy(conn))
+                                        {
+                                            //設定一個批次量寫入多少筆資料
+                                            sqlBC.BatchSize = 1000;
 
-                                        File.Move(path, Path.Combine(backUpFolder, fileName));
+                                            //設定逾時的秒數
+                                            sqlBC.BulkCopyTimeout = 60;
+
+                                            //設定要寫入的資料庫
+                                            sqlBC.DestinationTableName = "EMPL_MAPPING_forOracle";
+
+                                            //對應資料行
+                                            sqlBC.ColumnMappings.Add("COUNTRY", "COUNTRY");
+                                            sqlBC.ColumnMappings.Add("USERID", "USERID");
+                                            sqlBC.ColumnMappings.Add("NDPPC_UID", "NDPPC_UID");
+                                            sqlBC.ColumnMappings.Add("LDATE", "LDATE");
+                                            sqlBC.ColumnMappings.Add("LUSER", "LUSER");
+
+                                            //開始寫入
+                                            sqlBC.WriteToServer(tbEmplMapping);
+                                        }
                                     }
+
+                                    File.Move(path, Path.Combine(backUpFolder, fileName));
                                 }
                             }
                         }
