@@ -4,8 +4,8 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 -->
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <_PublishTargetUrl>D:\CarlCheng\Source code\一站通\取得各縣市帳號\01DataEaiApi\DataEaiApi\bin\app.publish\</_PublishTargetUrl>
-    <History>True|2021-12-13T06:52:41.7101430Z;True|2021-12-12T15:21:11.5689496+08:00;True|2021-12-08T16:08:28.8933418+08:00;True|2021-12-08T11:09:37.6096603+08:00;True|2021-12-08T10:54:14.4318875+08:00;</History>
+    <_PublishTargetUrl>D:\CarlCheng\Source code\GitHub\ACCSYCN\01DataEaiApi\DataEaiApi\bin\app.publish\</_PublishTargetUrl>
+    <History>True|2022-07-29T05:32:04.2559401Z;True|2022-07-29T13:26:37.7385830+08:00;True|2022-07-29T13:19:25.6254127+08:00;True|2021-12-13T14:52:41.7101430+08:00;True|2021-12-12T15:21:11.5689496+08:00;True|2021-12-08T16:08:28.8933418+08:00;True|2021-12-08T11:09:37.6096603+08:00;True|2021-12-08T10:54:14.4318875+08:00;</History>
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/Antlr3.Runtime.dll">
@@ -15,10 +15,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>09/10/2013 16:29:20</publishTime>
     </File>
     <File Include="bin/DataEaiApi.dll">
-      <publishTime>12/13/2021 14:50:58</publishTime>
+      <publishTime>07/29/2022 13:26:36</publishTime>
     </File>
     <File Include="bin/DataEaiApi.pdb">
-      <publishTime>12/13/2021 14:50:58</publishTime>
+      <publishTime>07/29/2022 13:26:36</publishTime>
     </File>
     <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
       <publishTime>09/05/2018 16:10:50</publishTime>
@@ -309,13 +309,13 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>11/29/2021 15:20:48</publishTime>
     </File>
     <File Include="Views/Home/About.cshtml">
-      <publishTime>11/29/2021 15:20:19</publishTime>
+      <publishTime>07/29/2022 13:30:28</publishTime>
     </File>
     <File Include="Views/Home/Contact.cshtml">
-      <publishTime>11/29/2021 15:20:19</publishTime>
+      <publishTime>07/29/2022 13:30:29</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>11/29/2021 15:20:19</publishTime>
+      <publishTime>07/29/2022 13:31:00</publishTime>
     </File>
     <File Include="Views/Shared/Error.cshtml">
       <publishTime>11/29/2021 15:20:19</publishTime>
@@ -327,10 +327,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>11/29/2021 15:20:19</publishTime>
     </File>
     <File Include="Views/_ViewStart.cshtml">
-      <publishTime>11/29/2021 15:20:19</publishTime>
+      <publishTime>07/29/2022 13:31:07</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>12/13/2021 14:52:40</publishTime>
+      <publishTime>07/29/2022 13:26:37</publishTime>
     </File>
   </ItemGroup>
 </Project>

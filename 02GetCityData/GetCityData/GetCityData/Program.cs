@@ -194,7 +194,7 @@ namespace GetCityData
             {
                 string sql = @"SELECT USERID ,PWD ,NAME ,COUNTRY ,DEPTNO ,JOBTITLE ,JOBTYPE ,
 ONDUTY ,EMAIL ,PRETEL ,TEL ,LASTTEL ,CELLPHONE ,LDATE ,LUSER ,
-ROLEID ,DELETED ,NEWDEPTNO ,NEWROLEID ,CHECKROLE ,MEMID FROM EMPL";
+ROLEID ,DELETED ,NEWDEPTNO ,NEWROLEID ,CHECKROLE ,MEMID FROM EMPL ";
                 DataTable dtEmpl = ExecuteQuery(sql);
                 if (dtEmpl != null)
                 {

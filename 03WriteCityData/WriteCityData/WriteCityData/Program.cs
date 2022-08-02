@@ -89,28 +89,17 @@ namespace WriteCityData
                                 string[] stringSeparators = new string[] { "\r\n" };
                                 string[] row = data.Split(stringSeparators, StringSplitOptions.None);
                                 DataTable tbDEPT = new DataTable();
-                                DataColumn CID = new DataColumn("CID");
-                                DataColumn DEPTNO = new DataColumn("DEPTNO");
-                                DataColumn DEPTNAME = new DataColumn("DEPTNAME");
-                                DataColumn INDEPTNO = new DataColumn("INDEPTNO");
-                                DataColumn GRADE = new DataColumn("GRADE");
-                                DataColumn ADDR = new DataColumn("ADDR");
-                                DataColumn X = new DataColumn("X");
-                                DataColumn Y = new DataColumn("Y");
-                                DataColumn LDATE = new DataColumn("LDATE");
-                                DataColumn LUSER = new DataColumn("LUSER");
-                                DataColumn DELETED = new DataColumn("DELETED");
-                                tbDEPT.Columns.Add(CID);
-                                tbDEPT.Columns.Add(DEPTNO);
-                                tbDEPT.Columns.Add(DEPTNAME);
-                                tbDEPT.Columns.Add(INDEPTNO);
-                                tbDEPT.Columns.Add(GRADE);
-                                tbDEPT.Columns.Add(ADDR);
-                                tbDEPT.Columns.Add(X);
-                                tbDEPT.Columns.Add(Y);
-                                tbDEPT.Columns.Add(LDATE);
-                                tbDEPT.Columns.Add(LUSER);
-                                tbDEPT.Columns.Add(DELETED);
+                                tbDEPT.Columns.Add("CID", typeof(string));
+                                tbDEPT.Columns.Add("DEPTNO", typeof(string));
+                                tbDEPT.Columns.Add("DEPTNAME", typeof(string));
+                                tbDEPT.Columns.Add("INDEPTNO", typeof(string));
+                                tbDEPT.Columns.Add("GRADE", typeof(string));
+                                tbDEPT.Columns.Add("ADDR", typeof(string));
+                                tbDEPT.Columns.Add("X", typeof(string));
+                                tbDEPT.Columns.Add("Y", typeof(string));
+                                tbDEPT.Columns.Add("LDATE", typeof(string));
+                                tbDEPT.Columns.Add("LUSER", typeof(string));
+                                tbDEPT.Columns.Add("DELETED", typeof(string));
                                 for (int s = 0; s < row.Count(); s++)
                                 {
                                     if (row[s].Equals(string.Empty))
@@ -224,48 +213,27 @@ namespace WriteCityData
                                 string[] row = data.Split('\n');
 
                                 DataTable tbEMPL = new DataTable();
-                                DataColumn USERID = new DataColumn("USERID");
-                                DataColumn PWD = new DataColumn("PWD");
-                                DataColumn NAME = new DataColumn("NAME");
-                                DataColumn COUNTRY = new DataColumn("COUNTRY");
-                                DataColumn DEPTNO = new DataColumn("DEPTNO");
-                                DataColumn JOBTITLE = new DataColumn("JOBTITLE");
-                                DataColumn JOBTYPE = new DataColumn("JOBTYPE");
-                                DataColumn ONDUTY = new DataColumn("ONDUTY");
-                                DataColumn EMAIL = new DataColumn("EMAIL");
-                                DataColumn PRETEL = new DataColumn("PRETEL");
-                                DataColumn TEL = new DataColumn("TEL");
-                                DataColumn LASTTEL = new DataColumn("LASTTEL");
-                                DataColumn CELLPHONE = new DataColumn("CELLPHONE");
-                                DataColumn LDATE = new DataColumn("LDATE");
-                                DataColumn LUSER = new DataColumn("LUSER");
-                                DataColumn ROLEID = new DataColumn("ROLEID");
-                                DataColumn DELETED = new DataColumn("DELETED");
-                                DataColumn NEWDEPTNO = new DataColumn("NEWDEPTNO");
-                                DataColumn NEWROLEID = new DataColumn("NEWROLEID");
-                                DataColumn CHECKROLE = new DataColumn("CHECKROLE");
-                                DataColumn MEMID = new DataColumn("MEMID");
-                                tbEMPL.Columns.Add(USERID);
-                                tbEMPL.Columns.Add(PWD);
-                                tbEMPL.Columns.Add(NAME);
-                                tbEMPL.Columns.Add(COUNTRY);
-                                tbEMPL.Columns.Add(DEPTNO);
-                                tbEMPL.Columns.Add(JOBTITLE);
-                                tbEMPL.Columns.Add(JOBTYPE);
-                                tbEMPL.Columns.Add(ONDUTY);
-                                tbEMPL.Columns.Add(EMAIL);
-                                tbEMPL.Columns.Add(PRETEL);
-                                tbEMPL.Columns.Add(TEL);
-                                tbEMPL.Columns.Add(LASTTEL);
-                                tbEMPL.Columns.Add(CELLPHONE);
-                                tbEMPL.Columns.Add(LDATE);
-                                tbEMPL.Columns.Add(LUSER);
-                                tbEMPL.Columns.Add(ROLEID);
-                                tbEMPL.Columns.Add(DELETED);
-                                tbEMPL.Columns.Add(NEWDEPTNO);
-                                tbEMPL.Columns.Add(NEWROLEID);
-                                tbEMPL.Columns.Add(CHECKROLE);
-                                tbEMPL.Columns.Add(MEMID);
+                                tbEMPL.Columns.Add("USERID", typeof(string));
+                                tbEMPL.Columns.Add("PWD", typeof(string));
+                                tbEMPL.Columns.Add("NAME", typeof(string));
+                                tbEMPL.Columns.Add("COUNTRY", typeof(string));
+                                tbEMPL.Columns.Add("DEPTNO", typeof(string));
+                                tbEMPL.Columns.Add("JOBTITLE", typeof(string));
+                                tbEMPL.Columns.Add("JOBTYPE", typeof(string));
+                                tbEMPL.Columns.Add("ONDUTY", typeof(string));
+                                tbEMPL.Columns.Add("EMAIL", typeof(string));
+                                tbEMPL.Columns.Add("PRETEL", typeof(string));
+                                tbEMPL.Columns.Add("TEL", typeof(string));
+                                tbEMPL.Columns.Add("LASTTEL", typeof(string));
+                                tbEMPL.Columns.Add("CELLPHONE", typeof(string));
+                                tbEMPL.Columns.Add("LDATE", typeof(string));
+                                tbEMPL.Columns.Add("LUSER", typeof(string));
+                                tbEMPL.Columns.Add("ROLEID", typeof(string));
+                                tbEMPL.Columns.Add("DELETED", typeof(string));
+                                tbEMPL.Columns.Add("NEWDEPTNO", typeof(string));
+                                tbEMPL.Columns.Add("NEWROLEID", typeof(string));
+                                tbEMPL.Columns.Add("CHECKROLE", typeof(string));
+                                tbEMPL.Columns.Add("MEMID", typeof(string));
 
                                 for (int s = 0; s < row.Count(); s++)
                                 {
@@ -384,16 +352,11 @@ namespace WriteCityData
                             if (data.Length > 0)
                             {
                                 DataTable tbEmplMapping = new DataTable();
-                                DataColumn COUNTRY = new DataColumn("COUNTRY");
-                                DataColumn USERID = new DataColumn("USERID");
-                                DataColumn NDPPC_UID = new DataColumn("NDPPC_UID");
-                                DataColumn LDATE = new DataColumn("LDATE");
-                                DataColumn LUSER = new DataColumn("LUSER");
-                                tbEmplMapping.Columns.Add(COUNTRY);
-                                tbEmplMapping.Columns.Add(USERID);
-                                tbEmplMapping.Columns.Add(NDPPC_UID);
-                                tbEmplMapping.Columns.Add(LDATE);
-                                tbEmplMapping.Columns.Add(LUSER);
+                                tbEmplMapping.Columns.Add("COUNTRY", typeof(string));
+                                tbEmplMapping.Columns.Add("USERID", typeof(string));
+                                tbEmplMapping.Columns.Add("NDPPC_UID", typeof(string));
+                                tbEmplMapping.Columns.Add("LDATE", typeof(string));
+                                tbEmplMapping.Columns.Add("LUSER", typeof(string));
 
                                 data = data.Replace("\r\n", "\n");
                                 string[] row = data.Split('\n');
@@ -467,36 +430,36 @@ namespace WriteCityData
         /// 執行sql指令碼不回傳
         /// </summary>
         /// <param name="sql">新增sql</param>
-        public static void ExecuteInsertCommand(string sql)
-        {
-            try
-            {
-                string connStr = ConfigurationManager.ConnectionStrings["conn"].ConnectionString;
+        //public static void ExecuteInsertCommand(string sql)
+        //{
+        //    try
+        //    {
+        //        string connStr = ConfigurationManager.ConnectionStrings["conn"].ConnectionString;
 
-                //建立資料庫連線
-                SqlConnection con = new SqlConnection(connStr);
+        //        //建立資料庫連線
+        //        SqlConnection con = new SqlConnection(connStr);
 
-                //啟用連線
-                con.Open();
+        //        //啟用連線
+        //        con.Open();
 
-                //SQL查詢指令
-                SqlCommand cmd = new SqlCommand(sql, con);
+        //        //SQL查詢指令
+        //        SqlCommand cmd = new SqlCommand(sql, con);
 
-                SqlDataAdapter adapter = new SqlDataAdapter();
-                adapter.InsertCommand = new SqlCommand(sql, con);
-                adapter.InsertCommand.ExecuteNonQuery();
+        //        SqlDataAdapter adapter = new SqlDataAdapter();
+        //        adapter.InsertCommand = new SqlCommand(sql, con);
+        //        adapter.InsertCommand.ExecuteNonQuery();
 
-                //關閉連線
-                if (adapter != null) { adapter.Dispose(); }
-                if (cmd != null) { cmd.Dispose(); }
-                if (con != null) { con.Close(); }
+        //        //關閉連線
+        //        if (adapter != null) { adapter.Dispose(); }
+        //        if (cmd != null) { cmd.Dispose(); }
+        //        if (con != null) { con.Close(); }
 
-            }
-            catch (Exception ex)
-            {
-                WriteLog("Error", "ExecuteQuery()發生錯誤:" + ex.Message);
-            };
-        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        WriteLog("Error", "ExecuteQuery()發生錯誤:" + ex.Message);
+        //    };
+        //}
 
         /// <summary>
         /// 執行sql指令碼不回傳
@@ -548,33 +511,6 @@ namespace WriteCityData
                     logger.Error(LogMess);
                     break;
             }
-            //string FileName = DateTime.Now.ToString("yyyyMMdd") + ".log";
-            //string str = Directory.GetCurrentDirectory();
-
-            //try
-            //{
-            //    if (!Directory.Exists(str + "\\Log"))
-            //    {
-            //        Directory.CreateDirectory(str + "\\Log");
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-            //    Console.WriteLine(string.Format("Failed to create directory on {0}: ", str + "\\Log"));
-            //    Console.WriteLine(ex.Message);
-            //    return;
-            //}
-
-
-            //string FilePath = str + "\\Log\\" + FileName;
-            //string strLog = LogType + "  " + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "  " + LogMess;
-
-            //StreamWriter sw = File.AppendText(FilePath);            
-            //sw.WriteLine(strLog);
-            //Console.WriteLine(strLog);
-            //sw.Flush();
-            //sw.Close();
-            //sw.Dispose();
         }
     }
 }

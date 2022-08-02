@@ -10,12 +10,12 @@ D:\CarlCheng\Source code\一站通WEB\取得各縣市帳號\03WriteCityData\Writ
 D:\CarlCheng\Source code\一站通WEB\取得各縣市帳號\03WriteCityData\WriteCityData\WriteCityData\obj\x64\Debug\WriteCityData.csproj.CopyComplete
 D:\CarlCheng\Source code\一站通WEB\取得各縣市帳號\03WriteCityData\WriteCityData\WriteCityData\obj\x64\Debug\WriteCityData.exe
 D:\CarlCheng\Source code\一站通WEB\取得各縣市帳號\03WriteCityData\WriteCityData\WriteCityData\obj\x64\Debug\WriteCityData.pdb
-D:\CarlCheng\Source code\GitHub\ACCSYCN\03WriteCityData\WriteCityData\WriteCityData\bin\x64\Debug\NLog.xml
 D:\CarlCheng\Source code\GitHub\ACCSYCN\03WriteCityData\WriteCityData\WriteCityData\bin\x64\Debug\NLog.config
 D:\CarlCheng\Source code\GitHub\ACCSYCN\03WriteCityData\WriteCityData\WriteCityData\bin\x64\Debug\WriteCityData.exe.config
 D:\CarlCheng\Source code\GitHub\ACCSYCN\03WriteCityData\WriteCityData\WriteCityData\bin\x64\Debug\WriteCityData.exe
 D:\CarlCheng\Source code\GitHub\ACCSYCN\03WriteCityData\WriteCityData\WriteCityData\bin\x64\Debug\WriteCityData.pdb
 D:\CarlCheng\Source code\GitHub\ACCSYCN\03WriteCityData\WriteCityData\WriteCityData\bin\x64\Debug\NLog.dll
+D:\CarlCheng\Source code\GitHub\ACCSYCN\03WriteCityData\WriteCityData\WriteCityData\bin\x64\Debug\NLog.xml
 D:\CarlCheng\Source code\GitHub\ACCSYCN\03WriteCityData\WriteCityData\WriteCityData\obj\x64\Debug\WriteCityData.csproj.AssemblyReference.cache
 D:\CarlCheng\Source code\GitHub\ACCSYCN\03WriteCityData\WriteCityData\WriteCityData\obj\x64\Debug\WriteCityData.csproj.SuggestedBindingRedirects.cache
 D:\CarlCheng\Source code\GitHub\ACCSYCN\03WriteCityData\WriteCityData\WriteCityData\obj\x64\Debug\WriteCityData.csproj.CoreCompileInputs.cache
