@@ -44,6 +44,10 @@ namespace DataEaiApi.Models
                     filePathSb.Append(dtDeptList.City);
                     filePathSb.Append(".txt");
                     string filePath = filePathSb.ToString();
+                    if (System.IO.File.Exists(filePath))
+                    {
+                        File.Delete(filePath);
+                    }
 
                     StreamWriter sw = File.AppendText(filePath);
                     foreach (DtDept dt in dtDeptList.DtDepts)
@@ -121,6 +125,10 @@ namespace DataEaiApi.Models
                     filePathSb.Append(dtEmplList.City);
                     filePathSb.Append(".txt");
                     string filePath = filePathSb.ToString();
+                    if (System.IO.File.Exists(filePath))
+                    {
+                        File.Delete(filePath);
+                    }
 
                     StreamWriter sw = File.AppendText(filePath);
                     foreach (DtEmpl dt in dtEmplList.DtEmpls)
@@ -197,6 +205,10 @@ namespace DataEaiApi.Models
                     filePathSb.Append(dtEmplMapList.City);
                     filePathSb.Append(".txt");
                     string filePath = filePathSb.ToString();
+                    if (System.IO.File.Exists(filePath))
+                    {
+                        File.Delete(filePath);
+                    }
 
                     StreamWriter sw = File.AppendText(filePath);
                     foreach (DtEmplMap dt in dtEmplMapList.DtEmplMaps)

@@ -70,13 +70,13 @@ namespace GetCityData
                             ADDR = row["ADDR"].ToString();
                         }
 
-                        string X = "";
+                        string X = "0";
                         if (row["X"] != DBNull.Value)
                         {
                             X = row["X"].ToString();
                         }
 
-                        string Y = "";
+                        string Y = "0";
                         if (row["Y"] != DBNull.Value)
                         {
                             Y = row["Y"].ToString();

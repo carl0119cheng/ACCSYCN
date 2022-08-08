@@ -15,9 +15,19 @@ namespace WriteCityData
     internal class Program
     {
         private static Logger logger = LogManager.GetCurrentClassLogger();
+        private static string fileDir = ConfigurationManager.AppSettings["DataFilePath"].ToString();
+        private static string backUpDir = ConfigurationManager.AppSettings["BackUpFilePath"].ToString();
+        private static string backUpFolder = Path.Combine(backUpDir, DateTime.Now.ToString("yyyyMMdd_HHmmss"));
+        private static string connStr = ConfigurationManager.ConnectionStrings["conn"].ConnectionString;
         static void Main(string[] args)
         {
-            WriteData();
+            DirectoryInfo di = new DirectoryInfo(fileDir);
+            var files = di.GetFiles("*.txt", SearchOption.AllDirectories);
+            //判斷是否有檔案
+            if (files.Length > 0)
+            { 
+                WriteData();
+            }
         }
 
         public static void WriteData()
@@ -25,10 +35,7 @@ namespace WriteCityData
             logger.Info("程式開始執行");
             WriteLog("Info", "程式開始執行");
             // config參數，接收資料的檔案儲存路徑
-            string fileDir = ConfigurationManager.AppSettings["DataFilePath"].ToString();
-            string backUpDir = ConfigurationManager.AppSettings["BackUpFilePath"].ToString();
-            string backUpFolder = Path.Combine(backUpDir, DateTime.Now.ToString("yyyyMMdd_HHmmss"));
-            string connStr = ConfigurationManager.ConnectionStrings["conn"].ConnectionString;
+
             try
             {
                 //新增備份資料夾

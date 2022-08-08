@@ -5,7 +5,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <_PublishTargetUrl>D:\CarlCheng\Source code\GitHub\ACCSYCN\01DataEaiApi\DataEaiApi\bin\app.publish\</_PublishTargetUrl>
-    <History>True|2022-07-29T05:32:04.2559401Z;True|2022-07-29T13:26:37.7385830+08:00;True|2022-07-29T13:19:25.6254127+08:00;True|2021-12-13T14:52:41.7101430+08:00;True|2021-12-12T15:21:11.5689496+08:00;True|2021-12-08T16:08:28.8933418+08:00;True|2021-12-08T11:09:37.6096603+08:00;True|2021-12-08T10:54:14.4318875+08:00;</History>
+    <History>True|2022-08-02T05:58:07.4327880Z;True|2022-07-29T13:32:04.2559401+08:00;True|2022-07-29T13:26:37.7385830+08:00;True|2022-07-29T13:19:25.6254127+08:00;True|2021-12-13T14:52:41.7101430+08:00;True|2021-12-12T15:21:11.5689496+08:00;True|2021-12-08T16:08:28.8933418+08:00;True|2021-12-08T11:09:37.6096603+08:00;True|2021-12-08T10:54:14.4318875+08:00;</History>
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/Antlr3.Runtime.dll">
@@ -15,10 +15,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>09/10/2013 16:29:20</publishTime>
     </File>
     <File Include="bin/DataEaiApi.dll">
-      <publishTime>07/29/2022 13:26:36</publishTime>
+      <publishTime>08/02/2022 13:57:54</publishTime>
     </File>
     <File Include="bin/DataEaiApi.pdb">
-      <publishTime>07/29/2022 13:26:36</publishTime>
+      <publishTime>08/02/2022 13:57:54</publishTime>
     </File>
     <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
       <publishTime>09/05/2018 16:10:50</publishTime>
@@ -330,7 +330,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>07/29/2022 13:31:07</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>07/29/2022 13:26:37</publishTime>
+      <publishTime>08/02/2022 13:58:06</publishTime>
     </File>
   </ItemGroup>
 </Project>
