@@ -32,7 +32,7 @@ namespace WriteCityData
 
         public static void WriteData()
         {
-            logger.Info("程式開始執行");
+            //logger.Info("程式開始執行");
             WriteLog("Info", "程式開始執行");
             // config參數，接收資料的檔案儲存路徑
 
@@ -341,7 +341,7 @@ namespace WriteCityData
                 WriteLog("Info", "開始新增資料至 EMPL_MAPPING");
                 string emplMapDir = Path.Combine(fileDir, "EMPL_MAPPING");
                 List<DtEmplMap> emplMapLst = new List<DtEmplMap>();
-                bool hasRow = false;
+                //bool hasRow = false;
 
                 string emplMapSQL = string.Empty;
                 if (Directory.Exists(emplMapDir))
